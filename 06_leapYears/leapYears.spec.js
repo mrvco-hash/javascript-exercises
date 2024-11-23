@@ -4,7 +4,7 @@ describe('leapYears', () => {
   test('works with non century years', () => {
     expect(leapYears(1996)).toBe(true);
   });
-  test.skip('works with non century years', () => {
+  test('works with non century years', () => {
     expect(leapYears(1997)).toBe(false);
   });
   test.skip('works with ridiculously futuristic non century years', () => {
