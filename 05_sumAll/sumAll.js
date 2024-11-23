@@ -1,31 +1,20 @@
 const sumAll = function(num1, num2) {
-    let total = 0;
-    let compteur = 0;
+    let sum = 0;
 
-    if ((Number.isInteger(num1)) && Number (Number.isInteger(num2))) {
-        if ((num1 < 0) || (num2 < 0)) {
-            return "ERROR";
-        } else {
-            if (num1 < num2) {
-                while (num1 <= num2) {
-                    total += num1
-            
-                    num1++
-                    compteur++
-                }
-            } else if (num1 > num2) {
-                while (num2 <= num1) {
-                    total += num2
-            
-                    num2++
-                    compteur++
-                }
-            }
-            return total
-        }
-    } else {
+    if (num1 > num2) {
+        let num3 = 0;
+        num3 = num2;
+        num2 = num1;
+        num1 = num3;
+    }
+    if (num1 < 0 || num2 < 0 || num1 % 1 !== 0 || num1 % 1 !== 0 || typeof num1 !== "number" || typeof num2 !== "number") {
         return "ERROR"
     }
+    while (num1 <= num2) {
+        sum += num1
+        num1++;
+    }
+    return sum;
 };
 
 // Do not edit below this line
